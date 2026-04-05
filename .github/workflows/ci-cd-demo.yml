@@ -1,0 +1,25 @@
+name: Full CI/CD Demo
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  full-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: echo "Building the application..."
+
+      - name: Run Tests
+        run: echo "Running tests..."
+
+      - name: Deploy
+        run: echo "Deploying the application..."
+
+      - name: Monitor
+        run: echo "Pipeline finished successfully!"
